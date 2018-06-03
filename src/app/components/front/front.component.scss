@@ -1,0 +1,94 @@
+.matprogressbar {
+	margin-bottom: 60px;
+}
+
+.main_wrap {
+	width: 70%;
+	margin-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	.form_sub {
+		.example-full-width {
+			width: 45%;
+			margin-right: 10%;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.mat-card-actions {
+			margin-left: 0px;
+	    margin-right: 0px;
+	    padding: 0;
+		}
+	} 
+	.mat-list {
+		.mat-list-item {
+			margin-bottom: 10px;
+	    height: auto;
+	    .mat-accordion {
+	    	width: 100%;
+	    	.mat-expansion-panel-header {
+					.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
+				    width: 15%;
+				    line-height: 17px;
+		    	}
+	    	}
+		  }
+		}
+	}
+	.mat-progress-spinner {
+		margin: 20px auto 0 auto;
+	}
+}
+.mat-form-field_accordion {
+	width: 38%;
+	margin-right: 6%;
+}
+
+.mat-raised-button {
+	margin-right: 4%;
+}
+.mat-raised-button.mat-accent {
+	color: #fff;
+	background-color: #e443ef;
+}
+
+h2 {
+	margin-bottom: 20px;
+  font-weight: 700;
+	color: darkslateblue;
+}
+.mar {
+	margin-bottom: 30px;
+}
+
+
+/* On screens that are 768px wide or less */
+@media screen and (max-width: 768px) {
+	.main_wrap {
+		width: 100%;
+		padding-left: 15px; 
+    padding-right: 15px;
+	}
+	.main_wrap .form_sub .example-full-width {
+		width: 100%;
+		margin-right: 0;
+	}
+	.mat-form-field_accordion {
+		width: 100%;
+	}
+	.mat-expansion-panel-header:not([aria-disabled=true]) {
+		height: auto !important;
+    padding: 12px 10px;
+	}
+	.mat-raised-button {
+		font-size: 12px;
+		min-width: 80px;
+		line-height: 28px;
+    padding: 0;
+	}
+	.mat-toolbar-row, .mat-toolbar-single-row {
+    white-space: normal;
+		justify-content: center;
+	}
+}

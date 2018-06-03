@@ -1,0 +1,85 @@
+<!-- Header tools -->
+<mat-toolbar color="primary">
+	<span>Angular + Material App</span>
+</mat-toolbar>
+
+<!-- Progress bar -->
+<div class="matprogressbar">
+	<mat-progress-bar *ngIf="showProgressBar"
+		class="example-margin"
+		[color]="color" 
+		[mode]="mode"
+		[value]="value"
+		[bufferValue]="bufferValue">
+	</mat-progress-bar>
+</div>		
+
+<!-- Main Content -->
+<section class="main_wrap">
+	<!-- Form Users -->
+	<mat-card class="main_cart mar">
+		<form (ngSubmit)="onSubmit()" class="form_sub">
+			<h2>Addition User Form</h2>
+		  <mat-card-content>
+			  <mat-form-field class="example-full-width">
+			    <input matInput placeholder="Add Name" [(ngModel)]="user.username" name="username">
+			  </mat-form-field>
+			  <mat-form-field class="example-full-width">
+			    <input matInput placeholder="Add Profession" [(ngModel)]="user.profession" name="profession">
+			  </mat-form-field>
+		  </mat-card-content>
+		  <mat-card-actions>
+		    <button mat-raised-button color="primary" value="Submit">ADD USER</button>
+		  </mat-card-actions>
+		</form>
+	</mat-card>
+
+	<!-- List Users -->
+	<mat-card class="main_cart">
+
+		<mat-list *ngIf="users?.length > 0;" role="list">
+		  <mat-list-item *ngFor="let user of users">
+
+				<mat-accordion>
+					<form (ngSubmit)="updateUser(user)">
+					  <mat-expansion-panel>
+					    <mat-expansion-panel-header>
+					      <mat-panel-title>
+					     		Name: {{user.username}}
+					      </mat-panel-title>
+					      <mat-panel-description>
+					        Profession: {{user.profession}}
+					      </mat-panel-description>
+					    </mat-expansion-panel-header>
+
+					    <mat-form-field class="mat-form-field_accordion"> 
+					    	<input matInput placeholder="Edit Name" [(ngModel)]="user.username" name="username">
+						  </mat-form-field>
+						  <mat-form-field class="mat-form-field_accordion">
+						    <input matInput placeholder="Edit Profession" [(ngModel)]="user.profession" name="profession">
+						  </mat-form-field>
+
+						  <button type="button" mat-raised-button color="primary" (click)="deleteUser(user)">Delete User</button>
+						  <button mat-raised-button color="accent" >Update User</button> 
+					  </mat-expansion-panel>
+					</form>
+				</mat-accordion>
+				
+		  </mat-list-item>
+		</mat-list>
+		<mat-list *ngIf="users?.length == 0;" role="list">
+			<h2>NO USERS CREATE !</h2>
+		</mat-list>
+
+		<!-- Spinner when load firebase -->
+		<mat-card-content *ngIf="showSpinner">
+			<mat-progress-spinner 
+				class="example-margin"
+				[color]="color" 
+				[mode]="mode"
+				[value]="value">
+			</mat-progress-spinner>
+		</mat-card-content>
+
+	</mat-card>
+</section>
