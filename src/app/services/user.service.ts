@@ -11,7 +11,7 @@ export class UserService {
 	private FirestoreCollection: AngularFirestoreCollection<User>; 
   private FirestoreDocument: AngularFirestoreDocument<User>;
 
-	users: Observable<User[]>;
+	users: Observable<User[]>; 
 
   constructor(private afs: AngularFirestore) {
   	// afs.firestore.settings( { timestampsInSnapshots: true } );
