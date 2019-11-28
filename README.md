@@ -1,6 +1,43 @@
 # Userbasefirebase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 
+updated to vesrion 8.3.19
+
+Packages Versions
+
+@angular-devkit/architect         0.803.19
+
+@angular-devkit/build-angular     0.803.19
+
+@angular-devkit/build-optimizer   0.803.19
+
+@angular-devkit/build-webpack     0.803.19
+
+@angular-devkit/core              8.3.19
+
+@angular-devkit/schematics        8.3.19
+
+@angular/cdk                      8.2.3
+
+@angular/cli                      8.3.19
+
+@angular/fire                     5.2.3
+
+@angular/http                     7.2.15
+
+@angular/material                 8.2.3
+
+@ngtools/webpack                  8.3.19
+
+@schematics/angular               8.3.19
+
+@schematics/update                0.803.19
+
+rxjs                              6.5.3
+
+typescript                        3.4.5
+
+webpack                           4.39.2
 
 ## Development server
 
